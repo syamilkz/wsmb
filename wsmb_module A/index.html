@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- start dropbox -->
+  <div class="navbar">
+    <img src="gambar/logo.png" width="150">
+    <a href="#contact">Contact</a>
+    <div class="dropdown">
+      <button class="dropbtn">Our Service</button>
+      <div class="dropdown-content">
+        <a href="#">Hotel Reservation</a>
+        <a href="#">Staff Transpotation</a>
+        <a href="#">Air Ticketing</a>
+        <a href="#">Pasport and Visa</a>
+        <a href="#">Car Rental</a>
+        <a href="#">Car on Call</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Top Destination</button>
+      <div class="dropdown-content">
+        <a href="#">Singapore</a>
+        <a href="#">Thailand</a>
+        <a href="#">Vietnam</a>
+        <a href="#">Melbourne</a>
+      </div>
+    </div>
+    <a href="#news">About Us</a>
+    <div class="dropdown">
+      <button class="dropbtn">Tour Package</button>
+      <div class="dropdown-content">
+        <a href="#">International Tour </a>
+        <a href="#">Adventure Tour</a>
+        <a href="#">Domestic Tour</a>
+      </div>
+    </div>
+    <a href="#home">Home</a>
+  </div>
+    <!-- end dropbox -->
+
+  <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- slide image -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="slider/slider_1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="slider/slider_2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="slider/slider_3.jpg" style="width:100%">
+  </div>
+
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- Bulat -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<!-- Java Script start -->
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+  <!-- Java Script end -->
+
+  <!-- selected box -->
+  
+  <div class="container"> 
+  <form class="custom-select">
+    <select>
+      <option value="0">where you want to go:</option>
+      <option value="1">Singapore</option>
+      <option value="2">Thailand</option>
+      <option value="3">Vietnam</option>
+      <option value="4">Melbourne</option>
+    </select>
+    <form>
+      <label for="date">Date:</label>
+      <input type="date">
+    </form>
+    <form class="custom-select">
+      <select>
+        <option value="0">Number of people:</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <input type="submit" value="Submit">
+    </div>
+
+  <!--selected box end-->
+
+  <!--tour packages-->
+    <div class="how-section1">
+      <div class="row">
+              <p><img src="gambar/tour_img_1.jpg" alt="tour1"style width=" 170px" height="170px" />International Tour</p>
+              <br>
+          <p class="text-muted">Nunc at velit quis lectus nonummy eleifend. Curabitur eros. Aenean ligula dolor, gravida auctor, auctor et, suscipit in, erat. Sed malesuada, enim ut congue pharetra, massa elit convallis pede, ornare scelerisque libero neque ut neque. In at libero. Curabitur molestie. Sed vel neque. Proin et dolor ac ipsum elementum malesuada. Praesent id orci. Donec hendrerit. In hac habitasse platea dictumst. Aenean sit amet arcu a turpis posuere pretium.
+            <br><br><br><br> <b>Go For International tour > </b> </p>
+          </div>
+      </div>
+      <br>
+      <div class="how-section1">
+        <div class="row">
+                <p><img src="gambar/tour_img_2.jpg" alt="tour1"style width=" 170px" height="170px" />Adventure Tour</p>
+                <br>
+            <p class="text-muted">Nunc at velit quis lectus nonummy eleifend. Curabitur eros. Aenean ligula dolor, gravida auctor, auctor et, suscipit in, erat. Sed malesuada, enim ut congue pharetra, massa elit convallis pede, ornare scelerisque libero neque ut neque. In at libero. Curabitur molestie. Sed vel neque. Proin et dolor ac ipsum elementum malesuada. Praesent id orci. Donec hendrerit. In hac habitasse platea dictumst. Aenean sit amet arcu a turpis posuere pretium.
+              <br><br><br><br> <b>Go For Adventure tour > </b> </p>
+            </div>
+        </div>
+            <div class="how-section1">
+              <div class="row">
+                      <p><img src="gambar/tour_img_3.jpg" alt="tour1"style width=" 170px" height="170px" />Domestic Tour</p>
+                      <br>
+                  <p class="text-muted">Nunc at velit quis lectus nonummy eleifend. Curabitur eros. Aenean ligula dolor, gravida auctor, auctor et, suscipit in, erat. Sed malesuada, enim ut congue pharetra, massa elit convallis pede, ornare scelerisque libero neque ut neque. In at libero. Curabitur molestie. Sed vel neque. Proin et dolor ac ipsum elementum malesuada. Praesent id orci. Donec hendrerit. In hac habitasse platea dictumst. Aenean sit amet arcu a turpis posuere pretium.
+                    <br><br><br><br> <b>Go For Domestic tour > </b> </p>
+                  </div>
+              </div>
+  <!---end tour package-->
+
+  <h5>
+    Top Destination
+  </h5>
+    <!-- The grid: four columns -->
+<div class="row">
+  <div class="column2">
+    <img src="gambar/destination_1.jpg" width="100%" height="100%">
+    <i><p>Singapore</p></i>
+  </div>
+  <div class="column2">
+    <img src="gambar/destination_2.jpg"width="100%" height="100%">
+    <i><p>Thailand</p></i>
+  </div>
+  <div class="column2">
+    <img src="gambar/destination_3.jpg"width="100%" height="100%">
+    <i><p>Vietnam</p></i>
+  </div>
+  <div class="column2">
+    <img src="gambar/destination_4.jpg"width="100%" height="100%">
+    <i><p>Melbourne</p></i>
+  </div>
+</div>
+<br>
+<!--four column end-->
+
+<div id="textbox">
+  <p class="alignleft">About Us</p><b>
+  <p class="alignright">Nunc at velit quis lectus nonummy eleifend. Curabitur eros.<br>
+    erat. Sed malesuada, enim ut congue pharetrat neque. </p>
+    <br>
+    <br>
+    <br>
+</div>
+
+<div class="row">
+  <div class="column">
+    <table>
+      <tr>
+        <th><img src="gambar/adventure.png" width="35%" height="35%"></th>
+        <th>Destination Variety</th>
+        
+        
+        
+      </tr>
+      <tr>
+        <td><img src="gambar/calendar.png" width="35%" height="35%"></td>
+        <th>Everything's on Schedule</th>
+        
+      </tr>
+      <tr>
+        <td><img src="gambar/hotel.png" width="35%" height="35%"></td>
+        <th>Confortable Housing</th>
+        
+      </tr>
+      
+    </table>
+  </div>
+  <div class="column">
+    <table>
+      <tr>
+        <td><span style = "color:rgb(255, 0, 170) ;font-weight:bold" >689 +</span></td>
+        <th>Tours</th>
+        
+      </tr>
+      <tr>
+        <td><span style="color:rgb(255, 0, 170);font-weight:bold">320 +</span></td>
+        <th>Destinations</th>
+        
+      </tr>
+      <tr>
+        <td><span style="color:rgb(255, 0, 170);font-weight:bold"> 60  +</span></td>
+        <th>Countries</th>
+        
+      </tr>
+      <tr>
+        <td><span style="color:rgb(255, 0, 170);font-weight:bold">1.8 M +</span></td>
+        <th>Tourists</th>    
+    </table>
+  </div>
+</div><br>
+
+<div class="container2">
+  <img src="gambar/service_wrapper.jpg" alt="service_wrapper" style="width:100%;">
+  <div class="our-services">Our Services</div>
+  <div class="centered">Nunc at velit quis lectus nonummy eleifend. Curabitur eros.<br>
+    erat. Sed malesuada, enim ut congue pharetrat neque.</div>
+      <div class="text-block">
+        <img src="gambar/hotel_1.png" alt="Norway" style="width:35%; height: 35%;" class="center">
+        <p>hotel Reservation</p><hr>
+        <img src="gambar/passport.png" alt="Norway" style="width:35%; height: 35%;" class="center">
+        <p>Pasport And Visa</p>        
+      </div>
+      <div class="text-block2">
+        <img src="gambar/disability.png" alt="Norway" style="width:30%; height: 30%;" class="center">
+        <p>Staff Transportation</p><hr>
+        <img src="gambar/car_wash.png" alt="Norway" style="width:30%; height: 30%;" class="center">
+        <p>Car Rental Services</p>        
+      </div>
+      <div class="text-block3">
+        <img src="gambar/airplane.png" alt="Norway" style="width:47%; height: 47%;" class="center">
+        <p>Air Ticketing</p><hr>
+        <img src="gambar/car.png" alt="Norway" style="width:47%; height: 47%;" class="center">
+        <p>Car On Call</p>        
+      </div>
+</div><br>
+
+<div class="image">
+  <img src="gambar/ft_logo.png" height="10%" width="10%">
+</div>
+
+</body>
+</html>
